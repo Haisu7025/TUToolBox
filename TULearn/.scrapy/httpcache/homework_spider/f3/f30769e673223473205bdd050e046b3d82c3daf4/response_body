@@ -1,0 +1,1034 @@
+<!--<script>window.open('info.htm','éç¥','width=550 height=600');</script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>清华大学网络教学</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/style1.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #990000;
+}
+-->
+</style>
+<script language="JavaScript">
+<!--
+
+function ch1(){
+str1=document.form1.userid.value.toString();
+str2= str1.substring(0,1);
+document.form1.userpass.focus();
+}
+
+function ch2(){
+document.form1.submit1.focus();
+}
+
+function checkempty(txtval){
+  if (txtval.length==0)
+     return false;
+  var i=0;
+  while (i<txtval.length) {
+     if (txtval.substring(i,i+1) != ' ')
+        return true;
+     i=i+1;
+  }
+  return false;
+}
+//-->
+</script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script language="JavaScript">
+$(function(){
+	$("#newCourses").click(function(){
+		$(this).addClass("active").prev().removeClass("active");
+		$("#showNewCourses").show();
+		$("#showOldCourses").hide();
+	});
+	$("#oldCourses").click(function(){
+		$(this).addClass("active").next().removeClass("active");
+		$("#showOldCourses").show();
+		$("#showNewCourses").hide();
+	});
+});
+</script>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#000000" vlink="#000000" alink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table bgcolor="#ffffff" width="780" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td><img src="img/banner.gif" width="780" height="82" border="0" usemap="#Map"></td>
+  </tr>
+</table>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+   <form action="https://learn.tsinghua.edu.cn/MultiLanguage/lesson/teacher/loginteacher.jsp" method=post name=form1 target="_top"> 
+    <td width="180" valign="top" bgcolor="#FFFFFF">
+    <table width="180" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEFEF">
+        <tr> 
+          <td height="2"></td>
+        </tr>        
+        <tr> 
+          <td ><div align="center" class="td1"><a href="http://academic.tsinghua.edu.cn" target="_blank"><img src="img/zhuce.jpg"  border="0" ></div></a></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#3C8136" height="22"><div align="center" class="td1"><strong><font color="#FFFFFF">用户登录</font></strong></div></td>
+        </tr>
+    </table>            
+    <table width="180" border="0" cellpadding="2" cellspacing="2" bgcolor="#FFFBE6">
+        <tr>
+          <td><table align="center" width="150" border=0 cellpadding="1" cellspacing="0">
+                      <!--<tr align="center"> 
+                        <td nowrap> <input name=leixin1 type=checkbox value=student onClick="ch4()">
+                          学生&nbsp;&nbsp;&nbsp;
+                          <input checked name=leixin type=checkbox value=teacher onClick="ch3()">
+                          教师</td>
+                      </tr>-->
+                      <tr valign="middle"> 
+                        <td nowrap>用户名 
+                          <input type="text" name="userid" style="BORDER-BOTTOM: #9a9999 1px solid; BORDER-LEFT: #9a9999 1px solid; BORDER-RIGHT: #9a9999 1px solid; BORDER-TOP: #9a9999 1px solid; FONT-SIZE: 9pt; WIDTH: 60px" length="10" onMouseOver="this.focus()" onFocus="this.select()" onChange="ch1()"></td>
+                      </tr>
+                      <tr valign="middle"> 
+                        <td>密　码&nbsp;<input type="password" name="userpass" style="BORDER-BOTTOM: #9a9999 1px solid; BORDER-LEFT: #9a9999 1px solid; BORDER-RIGHT: #9a9999 1px solid; BORDER-TOP: #9a9999 1px solid; FONT-SIZE: 9pt; WIDTH: 60px" length="10">
+                        <input type="submit" value="登录" style="height: 18px; font-size: 12px; color: #000000" name="submit1"></td>
+                      </tr>
+                  </table>                  
+           </td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="1">
+              <tr> 
+                <td bgcolor="#FFFAD9"><font color="#377632">&nbsp;&nbsp;登录总数: 184602890</font></td>
+              </tr>
+              <tr>   
+                <td bgcolor="#FFFAD9"><font color="#377632">&nbsp;&nbsp;今日登录: 85266</font></td>
+              </tr>
+              <tr> 
+                <td bgcolor="#FFFAD9"><font color="#377632">&nbsp;&nbsp;在线人数: 7914</font></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>               
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td bgcolor="#CDD7CE"><img src="img/kj.gif" width="180" height="38"></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#3C8136"><table width="98%" border="0" align="center" cellpadding="1" cellspacing="2" bgcolor="#FFFFFF">
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=16 target='_blank'>物理</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=36 target='_blank'>力学</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=33 target='_blank'>生物</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=17 target='_blank'>医学</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=23 target='_blank'>数学</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=22 target='_blank'>美术</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=26 target='_blank'>材料</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=25 target='_blank'>机械</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=10 target='_blank'>计算机</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=19 target='_blank'>电子电工</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=18 target='_blank'>文史艺术</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=15 target='_blank'>法律法规</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=14 target='_blank'>经济管理</a></div></td>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=11 target='_blank'>外语学习</a></div></td>
+</tr>
+<tr>
+<td width='50%'><div align='center'><a href=cod_search.jsp?c_Class=12 target='_blank'>土木建筑</a></div></td>
+<td width='50%'><div align='center'>&nbsp;</div></td>
+</tr>
+ 
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="4" bgcolor="#3C8136"></td>
+        </tr>        
+        <tr> 
+          <td bgcolor="#3C8136"><img src="img/xql.gif" width="180" height="18"></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#3C8136"><table width="98%" border="0" align="center" cellpadding="1" cellspacing="2" bgcolor="#FFFFFF">
+<tr>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=30 target='_blank'>体育</a></div></td>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=27 target='_blank'>素材库</a></div></td>
+</tr>
+<tr>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=35 target='_blank'>特别报道</a></div></td>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=34 target='_blank'>精彩演讲</a></div></td>
+</tr>
+<tr>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=32 target='_blank'>科学探索</a></div></td>
+<td colspan='2' valign='middle' width='50%' height='16'><div align='center'><a href=cod_search.jsp?c_Class=21 target='_blank'>业余爱好</a></div></td>
+</tr>
+ 
+
+            </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="4"></td>
+        </tr>
+      </table>
+      <img src="img/new.gif" width="180" height="18">
+      <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#FFFFFF">
+       <tr> 
+         <td><div align="center"><a href="cod_search.jsp?c_Class=29&c_Use=film" target="_blank">优秀影片</div></td>
+         <td><div align="center"><a href="cod_search.jsp?c_Class=29&c_Use=datum" target="_blank">清华资料</div></td>
+       </tr>
+      </table></td>
+        </tr>
+        <tr> 
+          <td height="4" bgcolor="#3C8136"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="2"></td>
+        </tr>
+      </table>            
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="2"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><div align="center" ><img src="img/glwj.gif" width="180" height="22"></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#3C8136"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="2" bgcolor="#EDF0EC">
+              <tr height="19"> 
+                <td><div align="center"><a href="flfg/gjfg.htm" target="_blank">国家法规</a>
+                &nbsp;<a href="flfg/js/jiaoshishouce/jssc.htm" target="_blank">教师手册</a></div></td>
+              </tr>
+              <tr height="19"> 
+                <td><div align="center"><a href="flfg/xs/xssz.htm" target="_blank">2005学生行为准则</a></div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td></form>
+    
+    <td valign="top">
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="5"></td>
+        </tr>
+      </table>
+       <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <TR>
+          <TD>
+		  
+		  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+		          <TR>
+          <TD align=middle width=176 height=19>
+            <DIV align=center><IMG height=19 src="img/xtgg.GIF" width="176"></DIV></TD>
+		  <TD align=middle background="img/xtgg_bg.gif" height="19">
+            <DIV align=right><A 
+                        href="MultiLanguage/lesson/msg_index.jsp" 
+                        target=_blank><IMG height=17 
+                        src="img/more.gif" width=56 border=0></DIV></TD>
+			</TR></TABLE>
+			
+			</TD>
+			</TR>
+        <tr> 
+          <td>
+            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td>
+  
+<TABLE border=0 cellPadding=2 cellSpacing=2 width=100% align="center">
+
+	<tr height=19>
+	 <td align=center width=14><img src=images/dot_h.gif width=5 height=5></td> <td align=left><a href='#' onClick='window.open("MultiLanguage/lesson/msg_look_info.jsp?id=11760",null,"height=450,width=500,status=no,toolbar=no,menubar=no,location=no,top=10,left=10,scrollbars=yes");'><font color=>关于新版网络学堂服务暂停的通知</font></a></td><td align=right width=80><font color=#000066>2017-06-22</font></td>
+	 </tr>
+
+	<tr height=19>
+	 <td align=center width=14><img src=images/dot_h.gif width=5 height=5></td> <td align=left><a href='#' onClick='window.open("MultiLanguage/lesson/msg_look_info.jsp?id=11740",null,"height=450,width=500,status=no,toolbar=no,menubar=no,location=no,top=10,left=10,scrollbars=yes");'><font color=Red>关于开展网络学堂用户问卷调查的通知</font></a></td><td align=right width=80><font color=#000066>2017-05-23</font></td>
+	 </tr>
+
+	<tr height=19>
+	 <td align=center width=14><img src=images/dot_h.gif width=5 height=5></td> <td align=left><a href='#' onClick='window.open("MultiLanguage/lesson/msg_look_info.jsp?id=11700",null,"height=450,width=500,status=no,toolbar=no,menubar=no,location=no,top=10,left=10,scrollbars=yes");'><font color=Red>马克思主义理论研究重点教材使用通知</font></a></td><td align=right width=80><font color=#000066>2017-03-10</font></td>
+	 </tr>
+
+	<tr height=19>
+	 <td align=center width=14><img src=images/dot_h.gif width=5 height=5></td> <td align=left><a href='#' onClick='window.open("MultiLanguage/lesson/msg_look_info.jsp?id=11622",null,"height=450,width=500,status=no,toolbar=no,menubar=no,location=no,top=10,left=10,scrollbars=yes");'><font color=Red>《信息化素养（初级）》课程期末考试通知</font></a></td><td align=right width=80><font color=#000066>2016-10-31</font></td>
+	 </tr>
+
+	<tr height=19>
+	 <td align=center width=14><img src=images/dot_h.gif width=5 height=5></td> <td align=left><a href='#' onClick='window.open("MultiLanguage/lesson/msg_look_info.jsp?id=11600",null,"height=450,width=500,status=no,toolbar=no,menubar=no,location=no,top=10,left=10,scrollbars=yes");'><img src='MultiLanguage/images/new.gif' border=0 />&nbsp;<font color=Red>本科专业课程教学问卷</font></a></td><td align=right width=80><font color=#000066>2016-07-04</font></td>
+	 </tr>
+	 
+	</table>
+              
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>      
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+        <TR>
+          <TD align=middle height=25>		  
+		  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+		          <TR>
+          <TD align=middle width=176 height=19>
+            <DIV align=center><IMG height=19 src="img/jwtz.gif" width="176"></DIV></TD>
+		  <TD align=middle background="img/xtgg_bg.gif" height="19">
+            <DIV align=right><A href="http://postinfo.tsinghua.edu.cn/f/jiaowugonggao/more"   target=_blank>
+            <IMG height=17  src="img/more.gif" width=56 border=0></DIV></TD>
+			</TR></TABLE>
+			</TD></TR>
+        <TR>
+        <tr> 
+          <td>
+            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td><iframe name="content" frameborder="0" height="100" scrolling="no" src="http://postinfo.tsinghua.edu.cn/f/jiaowugonggao/mini"  width="100%"></iframe></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <!--
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="25" align="center"><div align="left"><img src="img/ggwy.gif" width="391" height="19"></div></td>
+        </tr>
+        <tr> 
+          <td align="right">
+            <table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td><iframe name="content" frameborder="0" height="60" scrolling="no" src="http://166.111.4.87/zzh/04295.nsf/post?openform&count=2"  width="100%"></iframe> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      -->
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="2"></td>
+        </tr>
+      </table>
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+           <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+             <tr> 
+                <td width="141" bgcolor="#EFEFEF"><img src="img/bkc.gif" width="141" height="24"></td>
+                <td colspan="2" valign="bottom" background="img/bg_kc.gif" bgcolor="#EFEFEF" class="td1" nowap><strong><font color="#993300">[2200门]</font></strong>使用网络学堂</td>
+                <td  width="87" align="right"><img src="img/bkc1.gif" width="87" height="24"></td>
+              </tr>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="oldCourses" class="nav">旧版</div>
+          <div id="newCourses" class="active nav">新版</div>
+        </td>
+      </tr>
+        <tr> 
+          <td><div id="showOldCourses" class="hidden" ><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td colspan="4" bgcolor="#DAE0D8"><table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">                     
+                    <tr bgcolor="#DAE0D8" height="24"> 
+                      <td><strong><FONT color=#607C62>课程名称</font></strong></td>
+                      <td bgcolor="#DAE0D8"><strong><FONT color=#607C62>任课教师</font></strong></td>
+                      <td><strong><FONT color=#607C62>开放范围</font></strong></td>
+                      <td><strong><FONT color=#607C62>开课系所</font></strong></td>
+                      <td align="right"><strong><FONT color=#607C62>浏览次数</font></strong></td>
+                    </tr>                   
+            
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146761" target="_blank">物理实验A(...</a></td>
+      <td align=left>晋青珍</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>物理系</td>
+       <td align=right>15154</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146346" target="_blank">文化素质教育...</a></td>
+      <td align=left>蔡文鹏</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>人文学院</td>
+       <td align=right>14982</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=147608" target="_blank">机械科学与技...</a></td>
+      <td align=left>雒建斌</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>机械系</td>
+       <td align=right>11660</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146359" target="_blank">西方哲学精神...</a></td>
+      <td align=left>王晓朝</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>人文学院</td>
+       <td align=right>11000</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=147646" target="_blank">信息科学技术...</a></td>
+      <td align=left>陆建华</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>信息学院</td>
+       <td align=right>8615</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146763" target="_blank">物理实验B(...</a></td>
+      <td align=left>晋青珍</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>物理系</td>
+       <td align=right>8044</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=148990" target="_blank">实验室科研探...</a></td>
+      <td align=left>汤彬</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>训练中心</td>
+       <td align=right>6831</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146844" target="_blank">马克思主义基...</a></td>
+      <td align=left>韦正翔</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>马克思主义学院</td>
+       <td align=right>6034</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href=" /learn/courseinfo.jsp?course_id=146345" target="_blank">《庄子》导读</a></td>
+      <td align=left>陈怡</td>
+      <td align=left>
+      本班
+
+       </td>
+       <td align=left>人文学院</td>
+       <td align=right>5545</td>
+   </tr>
+
+              <tr bgcolor="#F3F4F2" height="25"> 
+                <td colspan="4" align=left><div align="right"><a href="/learn/course_list.jsp" target="new"></a></div></td>
+                <td align=left><a href="/learn/search_course.jsp" target="new"><font color="#607C62"><strong>更多&gt;&gt;&gt;</strong></font></a></td>
+              </tr>
+              <tr> 
+                <td colspan="5" height="5" bgcolor="#CCDDCC"></td>
+              </tr>
+              <tr> 
+                <td colspan="5" height="2" bgcolor="#FFFFFF"></td>
+              </tr>              
+              <tr> 
+                <td colspan="5" height="8" bgcolor="#ADC9AD"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <div id="showNewCourses"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td colspan="4" bgcolor="#DAE0D8"><table width="100%" border="0" align="center" cellpadding="1" cellspacing="1">                     
+                    <tr bgcolor="#DAE0D8" height="24"> 
+                      <td><strong><FONT color=#607C62>课程名称</font></strong></td>
+                      <td bgcolor="#DAE0D8"><strong><FONT color=#607C62>任课教师</font></strong></td>
+                      <td><strong><FONT color=#607C62>开课系所</font></strong></td>
+                      <td align="right"><strong><FONT color=#607C62>浏览次数</font></strong></td>
+                    </tr>                   
+            
+  
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-10421094-11" target="_blank">线性代数(1)</a></td>
+      <td align=left>荆文甲</td>
+       <td align=left>数学科学中心</td>
+       <td align=right>5196</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-10610183-12" target="_blank">思想道德修养与法律...</a></td>
+      <td align=left>朱效梅</td>
+       <td align=left>马克思主义学院</td>
+       <td align=right>4068</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-10421055-2" target="_blank">微积分A(1)</a></td>
+      <td align=left>王晓峰</td>
+       <td align=left>数学科学系</td>
+       <td align=right>3006</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-20250103-0" target="_blank">数字电子技术基础</a></td>
+      <td align=left>王红</td>
+       <td align=left>自动化系</td>
+       <td align=right>2917</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-10610183-13" target="_blank">思想道德修养与法律...</a></td>
+      <td align=left>朱效梅</td>
+       <td align=left>马克思主义学院</td>
+       <td align=right>2611</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-60240013-0" target="_blank">组合数学</a></td>
+      <td align=left>马昱春</td>
+       <td align=left>计算机科学与技术系</td>
+       <td align=right>2528</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-00691223-90" target="_blank">宗教学基础知识</a></td>
+      <td align=left>朱东华</td>
+       <td align=left>人文学院</td>
+       <td align=right>2447</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-10421094-15" target="_blank">线性代数(1)</a></td>
+      <td align=left>卢文轩</td>
+       <td align=left>数学科学中心</td>
+       <td align=right>2397</td>
+   </tr>
+
+   <tr bgcolor="#F3F4F2" height="23"> 
+      <td align=left><a href="http://learn.cic.tsinghua.edu.cn/common/netCourseInfo/2017-2018-1-00670143-90" target="_blank">电影文化</a></td>
+      <td align=left>尹红</td>
+       <td align=left>新闻与传播学院</td>
+       <td align=right>2304</td>
+   </tr>
+
+              <tr> 
+                <td colspan="5" height="5" bgcolor="#CCDDCC"></td>
+              </tr>
+              <tr> 
+                <td colspan="5" height="2" bgcolor="#FFFFFF"></td>
+              </tr>              
+              <tr> 
+                <td colspan="5" height="8" bgcolor="#ADC9AD"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      </div>
+          </td>
+        </tr>
+      </table>       
+    </td>
+
+    <td width="200" valign="top" bgcolor="#ffffff">
+      <form action="/learn/search_course.jsp" method="post" target="_blank" >
+       <div align="left"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td height="5"></td>
+          </tr>
+        </table>
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F7F1E6">
+          <tr> 
+            <td><img src="img/search.gif" width="199" height="22"></td>
+          </tr>
+          <tr>
+          <tr> 
+            <td><table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#F1F3F1">
+                <tr> 
+                  <td colspan="2" height="4"></td>
+                </tr>                
+                <tr>
+                  <td colspan="2">&nbsp;&nbsp;   
+                    <select name="semesterid" style="width: 160px; font-size: 12px; height: 18px">
+ 		
+              <option value="100020">2001春</option>
+ 		
+              <option value="100080">2001秋</option>
+ 		
+              <option value="100120">2002春</option>
+ 		
+              <option value="100140">2002秋</option>
+ 		
+              <option value="100160">2003春</option>
+ 		
+              <option value="100180">2003秋</option>
+ 		
+              <option value="100200">2004春</option>
+ 		
+              <option value="100220">2004夏</option>
+ 		
+              <option value="100240">2004秋</option>
+ 		
+              <option value="100260">2004-2005春</option>
+ 		
+              <option value="100280">2004-2005小学期</option>
+ 		
+              <option value="100300">2005-2006秋</option>
+ 		
+              <option value="100320">2005-2006春</option>
+ 		
+              <option value="100341">2005-2006小学期</option>
+ 		
+              <option value="100342">2006-2007秋</option>
+ 		
+              <option value="100380">2006-2007春</option>
+ 		
+              <option value="100400">2006-2007小学期</option>
+ 		
+              <option value="100420">2007-2008秋季学期</option>
+ 		
+              <option value="100440">2007-2008春季学期</option>
+ 		
+              <option value="100460">2007-2008小学期</option>
+ 		
+              <option value="100480">2008-2009秋季学期</option>
+ 		
+              <option value="100500">2008-2009春季学期</option>
+ 		
+              <option value="100520">2008-2009夏季学期</option>
+ 		
+              <option value="100521">2009-2010秋季学期</option>
+ 		
+              <option value="100540">2009-2010春季学期</option>
+ 		
+              <option value="100560">2009-2010夏季学期</option>
+ 		
+              <option value="100561">2010-2011秋季学期</option>
+ 		
+              <option value="100580">2010-2011春季学期</option>
+ 		
+              <option value="100600">2010-2011夏季学期</option>
+ 		
+              <option value="100601">2011-2012秋季学期</option>
+ 		
+              <option value="100620">2011-2012春季学期</option>
+ 		
+              <option value="100640">2011-2012夏季学期</option>
+ 		
+              <option value="100641">2012-2013秋季学期</option>
+ 		
+              <option value="100660">2012-2013春季学期</option>
+ 		
+              <option value="100680">2012-2013夏季学期</option>
+ 		
+              <option value="100681">2013-2014秋季学期</option>
+ 		
+              <option value="100700">2013-2014春季学期</option>
+ 		
+              <option value="100740">2013-2014夏季学期</option>
+ 		
+              <option value="100720">2014-2015秋季学期</option>
+ 		
+              <option value="100760">2014-2015春季学期</option>
+ 		
+              <option value="100780">2014-2015夏季学期</option>
+ 		
+              <option value="100781">2015-2016秋季学期</option>
+ 		
+              <option value="100800">2015-2016春季学期</option>
+ 		
+              <option value="100820">2015-2016夏季学期</option>
+ 		
+              <option value="100821">2016-2017秋季学期</option>
+ 		
+              <option value="100840">2016-2017春季学期</option>
+ 		
+              <option value="100860">2016-2017夏季学期</option>
+ 		
+              <option value="100861" selected
+>2017-2018秋季学期</option>
+ 
+                    </select>
+                  </td>
+                </tr>               
+                <tr> 
+                  <td colspan="2">                   　 
+                    <select name="depart_id" style="width: 83px; font-size: 12px; height: 18px">
+
+            <option value="000" >建筑学院
+
+            <option value="0001" >测试
+
+            <option value="0002" >进修1
+
+            <option value="001" >城规系
+
+            <option value="002" >建筑系
+
+            <option value="003" >土木系
+
+            <option value="004" >水利系
+
+            <option value="005" >环境学院
+
+            <option value="012" >机械系
+
+            <option value="013" >精仪系
+
+            <option value="014" >热能系
+
+            <option value="015" >汽车系
+
+            <option value="016" >工业工程
+
+            <option value="021" >信息学院
+
+            <option value="022" >电机系
+
+            <option value="023" >电子系
+
+            <option value="024" >计算机系
+
+            <option value="025" >自动化系
+
+            <option value="026" >微纳电子系
+
+            <option value="031" >航院
+
+            <option value="032" >工物系
+
+            <option value="033" >力学系
+
+            <option value="034" >化工系
+
+            <option value="035" >材料学院
+
+            <option value="041" >理学院
+
+            <option value="042" >数学系
+
+            <option value="043" >物理系
+
+            <option value="044" >化学系
+
+            <option value="045" >生命学院
+
+            <option value="046" >地学系
+
+            <option value="047" >交叉信息院
+
+            <option value="048" >高研院
+
+            <option value="049" >周培源数学中心
+
+            <option value="051" >经管学院
+
+            <option value="059" >公管学院
+
+            <option value="060" >金融学院
+
+            <option value="061" >人文社科学院
+
+            <option value="063" >中文系
+
+            <option value="064" >外文系
+
+            <option value="066" >法学院
+
+            <option value="067" >新闻学院
+
+            <option value="068" >马克思主义学院
+
+            <option value="069" >人文学院
+
+            <option value="070" >社科学院
+
+            <option value="072" >体育部
+
+            <option value="073" >电教中心
+
+            <option value="074" >计算中心
+
+            <option value="075" >图书馆
+
+            <option value="078" >艺教中心
+
+            <option value="080" >美术学院
+
+            <option value="090" >土水学院
+
+            <option value="091" >建管系
+
+            <option value="097" >苏世民书院
+
+            <option value="099" >建筑技术
+
+            <option value="101" >核研院
+
+            <option value="102" >微电子所
+
+            <option value="103" >教研院
+
+            <option value="104" >文研所
+
+            <option value="112" >网络中心
+
+            <option value="114" >宇航中心
+
+            <option value="151" >训练中心
+
+            <option value="155" >电工电子中心
+
+            <option value="205" >宣传部
+
+            <option value="207" >学生部
+
+            <option value="208" >保卫部
+
+            <option value="209" >武装部
+
+            <option value="252" >党办校办
+
+            <option value="254" >教务处
+
+            <option value="255" >研究生院
+
+            <option value="265" >生产处
+
+            <option value="291" >深研生院
+
+            <option value="305" >校医院
+
+            <option value="353" >紫光集团
+
+            <option value="357" >科技园
+
+            <option value="400" >医学院
+
+            <option value="402" >药学院
+
+            <option value="403" >生医系
+
+            <option value="410" >软件学院
+
+            <option value="412" >网络研究院
+
+            <option value="470" >新雅书院
+
+            <option value="600" >清华-伯克利深圳学院
+              
+            <option value="999" selected >所有系
+
+                    </select>                    
+                    <select name="student" style="width: 70px; font-size: 12px; height: 18px">
+			<option value="0"  >本科生课程</option>
+			<option value="1">研究生课程</option>
+			<option value="2"  selected >全部课程</option>
+        		</select>
+		  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;课程名： 
+                    <input type=text name=key_coursename style="BACKGROUND-COLOR: #f8f8f8;  BORDER-BOTTOM: #9a9999 1px solid; BORDER-LEFT: #9a9999 1px solid; BORDER-RIGHT: #9a9999 1px solid; BORDER-TOP: #9a9999 1px solid; FONT-SIZE: 9pt; WIDTH: 60px" length="10"></td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;&nbsp;&nbsp;教　师： 
+                    <input type=text name=key_teachername style="BACKGROUND-COLOR: #f8f8f8;  BORDER-BOTTOM: #9a9999 1px solid; BORDER-LEFT: #9a9999 1px solid; BORDER-RIGHT: #9a9999 1px solid; BORDER-TOP: #9a9999 1px solid; FONT-SIZE: 9pt; WIDTH: 60px" length="10"></td>
+                  <td><input type="submit" name="Submit" value="搜索" style="height: 18px; font-size: 12px; color: #000000"></td>
+                </tr>
+                
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="4" bgcolor="#B2C3B4"></td>
+          </tr>
+		   <tr> 
+            <td height="6" bgcolor="#339933"></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#DDE3DE">
+          <tr> 
+            <td height="2" colspan="2"></td>
+          </tr>
+          <tr> 
+            <td width="50" class="td1"><div align="center"><img src="img/lab.gif" width="24" height="20"></div></td>
+            <td><a href="http://www.lib.tsinghua.edu.cn/" target="_blank" class="b2"><strong>清华图书馆</strong></a></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td height="2" bgcolor="#FFFFFF"></td>
+          </tr>
+        </table>
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td><div class="td1"><img src="img/jxwz.gif" width="200" height="22"></div></td>
+          </tr>
+          <tr> 
+            <td bgcolor="#EDF0EC"><table width="96%" border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://academic.tsinghua.edu.cn/" target="_blank">教学门户</a></td>
+                  <td width="10"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://qiyuan.tsinghua.edu.cn/" target="_blank">教师憩园</a></td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://jwzx.cic.tsinghua.edu.cn" target="_blank">教务在线</a></td>
+                  <td><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://mars.math.tsinghua.edu.cn/mlab/default.asp" target="_blank">数学试验</a></td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://eee.tsinghua.edu.cn" target="_blank">外语自学</a></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td colspan="3"><a href="http://ccf.tsinghua.edu.cn" target="_blank">计算机文化基础课</td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td colspan="3"><a href="http://166.111.4.15/teach" target="_blank">计算机应用辅修专业</td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td colspan="3"><a href="http://rwxy.tsinghua.edu.cn/rwfg/wsds.htm" target="_blank">人文学院电子资源</a> 
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="10" valign="top"><div align="center"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td colspan="3"><a href="http://syskytjpt.cic.tsinghua.edu.cn" target="_blank">实验室科研探究</a> 
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td><div class="td1"><img src="img/syswz.gif" width="200" height="22"></div></td>
+          </tr>
+          <tr> 
+            <td valign="top" bgcolor="#EDF0EC"><table width="96%" border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://friend.cic.tsinghua.edu.cn" target="_blank">开放实验室</a></td>
+                </tr>            
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://166.111.27.130" target="_blank">普通物理实验室</a></td>
+                </tr>
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://syskfgl.cic.tsinghua.edu.cn/0030513/column210030513.jsp?center_id=84&" target="_blank">现代生命科学实验教学中心</a></td>
+                </tr>
+                
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://cadtc.tsinghua.edu.cn" target="_blank">计算机辅助设计教学中心</a></td>
+                </tr>
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://dgdz.cic.tsinghua.edu.cn/dgdz/index.jsp" target="_blank">电工电子学教学实验中心</a></td>
+                </tr>
+                <tr> 
+                  <td width="20" valign="top"><div align="right"><img src="img/dot_r.gif" width="7" height="9"></div></td>
+                  <td><a href="http://www.pim.tsinghua.edu.cn/units/ceshi_center/welcome.htm" target="_blank"><p>精仪系光电工程研究所--精密计量测试教学实验室</p></a></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td><div align="center" class="td1"><img src="img/yqlj.gif" width="200" height="22"></div></td>
+          </tr>
+          <tr> 
+            <td valign="top" bgcolor="#EDF0EC"><table width="96%" border="0" align="center" cellpadding="2" cellspacing="2">
+                <tr> 
+                  <td><div align="center"><a href="http://www.tsinghua.edu.cn" target="_blank">清华主页</a></div></td>
+                  <td><div align="center"><a href="http://www.student.tsinghua.edu.cn/" target="_blank">学生清华</a></div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><a href="http://myhome.tsinghua.edu.cn/" target="_blank">我的家园</a></div></td>
+                  <td><div align="center"><a href="http://tyhs.tsinghua.edu.cn/" target="_blank">藤影荷声</a></div></td>
+                </tr>
+                <tr>
+                  <td width="100"><div align="center"><a href="http://info.tsinghua.edu.cn" target="_blank">清华大学信息门户</a></div></td>
+                  <td><div align="center"><a href="http://166.111.4.21" target="_blank">远程教学</a></div></td>
+                </tr>                
+              </table></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="20" bgcolor="#3A8035"><div align="center"><font color="#FFFFFF"><strong>版权所有：清华大学注册中心 清华大学信息化技术中心</strong></font></div></td>
+  </tr>
+</table>
+</form>
+<map name="Map">
+  <area shape="rect" coords="268,64,308,80" href="index.jsp" target="_parent">
+  <area shape="rect" coords="327,64,378,79" href="public/help/faq.htm" target="_blank">
+  <area shape="rect" coords="403,64,475,80" href="public/help1/index.htm" target="_blank">
+  <area shape="rect" coords="492,63,544,82" href="mailto:wlxt@tsinghua.edu.cn" target="_blank">
+  <area shape="rect" coords="562,63,631,80" href="service.htm" target="_blank">
+</map>
+</body>
+</html>
+

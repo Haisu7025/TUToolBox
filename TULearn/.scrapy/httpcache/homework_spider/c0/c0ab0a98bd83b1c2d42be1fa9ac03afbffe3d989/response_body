@@ -1,0 +1,55 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网络学堂</title>
+
+<style type="text/css">
+<!--
+	/* 全局属性 */
+	body {text-align:center;margin:0 auto;padding:0;background:#fff;font-size:12px;color:#000;}
+	body > div {text-align:center;margin-right:auto;margin-left:auto;}
+	div,form,img,ul,ol,li,p,span {margin:0;padding:0;border:0;}
+	table {border-collapse:collapse;border:0;}
+	ul,li,ol {list-style:none;}
+	input,select,textarea,table,td {font-size:12px;}
+	h1,h2,h3,h4,h5,h6 {margin:0;padding:0;border:0;font:12px normal;}
+	ul {text-align:left;}
+	
+	/* 默认链接 */
+	a {color:#000;text-decoration:none;} /* 链接颜色 */
+	a:hover {text-decoration:underline;} /* 鼠标经过时状态 */
+	
+	/* err */
+	#err { width:603px; height:251px; background:url(/error/img/error_03.png) no-repeat; margin-top:50px; text-align:left;position:relative;}
+	#err h3 { padding:50px 20px 0 190px; font-size:22px; font-family:"微软雅黑"; font-weight:bold;word-wrap:break-word; overflow:hidden;}
+	.error_c {
+		margin:auto;
+		
+	}
+	.error_btn {
+		position:absolute;
+		bottom:30px;
+		right:30px;
+	}
+	.error_btn input {
+		*padding-top:3px;
+	}		
+	
+-->
+</style>
+
+</head>
+
+<body>
+	<div id="err">
+		<div class="error_c">
+	    	<h3>404错误：客户端请求的网页不存在。</h3>
+	        <div class="error_btn">
+	        	<input name="提交" type="button" onclick="top.document.location='/index.jsp'" value="重新登录网络学堂" style="margin-right:20px;" />
+	        	<input name="提交" type="button" onclick="top.window.close();" value="关 闭" />
+	        </div>
+    	</div>
+    </div>
+</body>
+</html>
