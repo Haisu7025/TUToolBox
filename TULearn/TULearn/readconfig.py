@@ -22,4 +22,3 @@ def setConfig(section="", key="", value=""):
 
 
 setConfig("user", "name", "test")
-print getConfig("user", "name")
