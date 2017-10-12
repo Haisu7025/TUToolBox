@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import re
 import scrapy
+import readconfig
 from scrapy.http import Request
 from scrapy.http import FormRequest
 from scrapy.selector import Selector
@@ -23,10 +24,12 @@ class HWSpider(scrapy.Spider):
         return [Request("https://learn.tsinghua.edu.cn", meta={'cookiejar': 1}, callback=self.post_login)]
 
     def post_login(self, response):
+        username = readconfig.getConfig("user", "username")
+        userpass = readconfig.getConfig("user", "userpass")
         print Selector(response)
         formdate = {
-            'userid': "**",
-            'userpass': "**",
+            'userid': username,
+            'userpass': userpass,
             'submit1': "登录"
         }
         print "login！！！！！"

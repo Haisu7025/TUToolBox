@@ -2,11 +2,15 @@
 # -*- coding: UTF-8 -*-
 
 import smtplib
+import spiders.readconfig
 from email.mime.text import MIMEText
 from email.header import Header
 
 
 def send_learn_msg(msg_list=[]):
+    if spiders.readconfig.getConfig("func", "mail") == "0":
+        print "邮件发送服务未开启"
+        return
     sender = 'from@runoob.com'
     receivers = ['tsinghua_yuhs15@163.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
