@@ -8,7 +8,7 @@
 import scrapy
 
 
-class TulearnItem(scrapy.Item):
+class HWItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     lesson_name = scrapy.Field()  # 课程名
@@ -16,3 +16,8 @@ class TulearnItem(scrapy.Item):
     homework_time = scrapy.Field()  # 作业ddl
     homework_state = scrapy.Field()
     pass
+
+
+class LFItem(scrapy.Item):
+    file_urls = scrapy.Field()
+    files = scrapy.Field()

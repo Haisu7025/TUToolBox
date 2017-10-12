@@ -19,6 +19,12 @@ python conf_init.py -u [username for tsinghua] -p [password for tsinghua]
 
 ### 更新日志
 
+#### 2017.10.13
+
+* 重命名了一些文件，重新组织了一部分代码结构，重命名了一些变量
+* 加入文件爬虫，暂时可以获得原始下载文件（无文件类型）
+* 使用了filepipeline，计划重写该pipeline以更好地匹配文件、类别和课程
+
 #### 2017.10.12
 
 * 将TULearn和TUNet从原仓库移到这里

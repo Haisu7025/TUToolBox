@@ -10,7 +10,7 @@ import mailtest
 from items import TulearnItem
 
 
-class TulearnPipeline(object):
+class HWPipeline(object):
     def open_spider(self, spider):
         self.msg_list = []
         self.file = codecs.open('items.json', 'w', 'utf-8')
@@ -36,3 +36,7 @@ class TulearnPipeline(object):
             # not submmited
             self.msg_list.append("课程【" + ln_s + "】有未提交作业:" + hn_s +
                                  "(截止时间:" + ht_s + ")，距离结束还有" + time_msg + "，请抓紧完成或提交")
+
+
+class LFPipeline(object):
+    pass
