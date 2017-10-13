@@ -44,12 +44,12 @@ class HWSpider(scrapy.Spider):
         return [FormRequest.from_response(response, formdata=formdate, callback=self.after_login)]
 
     def after_login(self, response):
-        lnk = 'http://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/mainstudent.jsp'
+        lnk = 'https://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/mainstudent.jsp'
         yield Request(lnk, self.parse)
 
     def parse(self, response):
         problem = Selector(response)
-        yield Request("http://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/MyCourse.jsp?language=cn", self.getClass)
+        yield Request("https://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/MyCourse.jsp?language=cn", self.getClass)
 
     def getClass(self, response):
         for sel in response.xpath('//*[@id="info_1"]/tr/td[1]/a'):
@@ -57,12 +57,12 @@ class HWSpider(scrapy.Spider):
                 'href="(.*)([0-9]{6})"', sel.extract())
             hz = hzg.group(1)
             course_id = hzg.group(2)
-            class_link = "http://learn.tsinghua.edu.cn" + hz + course_id
+            class_link = "https://learn.tsinghua.edu.cn" + hz + course_id
             yield Request(class_link, self.getHomeworkDetails, meta={'course_id': course_id})
 
     def getHomeworkDetails(self, response):
         course_id = response.meta['course_id']
-        yield Request("http://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/hom_wk_brw.jsp?course_id=" + course_id, callback=self.getHomeworkInfo)
+        yield Request("https://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/hom_wk_brw.jsp?course_id=" + course_id, callback=self.getHomeworkInfo)
 
     def getHomeworkInfo(self, response):
         for sel in response.xpath('//*[@id="info_1"]/tr[1]/td/text()'):

@@ -7,7 +7,10 @@
 import datetime
 import codecs
 import mailtest
-from items import TulearnItem
+import scrapy
+from items import HWItem, LFItem
+from scrapy.pipelines.files import FilesPipeline
+from scrapy.exceptions import DropItem
 
 
 class HWPipeline(object):
@@ -38,5 +41,18 @@ class HWPipeline(object):
                                  "(截止时间:" + ht_s + ")，距离结束还有" + time_msg + "，请抓紧完成或提交")
 
 
-class LFPipeline(object):
-    pass
+class LFPipeline(scrapy.pipelines.files.FilesPipeline):
+    def get_media_requests(self, item, info):
+        for file_url in item['file_urls']:
+            self.item = item
+            yield scrapy.Request(file_url, meta={"lessoname": item['lessonname'], "filename": item['filename']})
+
+    def item_completed(self, results, item, info):
+        file_paths = [x['path'] for ok, x in results if ok]
+        if not file_paths:
+            raise DropItem("Item contains no files")
+        #item['file_paths'] = file_paths
+        return item
+
+    def file_path(self, request, response=None, info=None):
+        return self.item['lessonname'] + "/" + self.item['filename']
