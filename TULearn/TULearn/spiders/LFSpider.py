@@ -68,10 +68,14 @@ class LFSpider(scrapy.Spider):
         yield Request("http://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/download.jsp?course_id=" + course_id, callback=self.getFileDetails)
 
     def getFileDetails(self, response):
-        for sel in response.xpath('//*[@id="table_box"]/tr[2]/td[2]/a/@href'):
-
-            print "wenjian!!!!!", sel.extract()
+        file_url_list = response.xpath(
+            '//*[@id="table_box"]/tr[2]/td[2]/a/@href')
+        file_name_list = response.xpath(
+            '//*[@id="table_box"]/tr[2]/td[2]/a/text()')
+        for index in range(len(file_url_list)):
             lfi = LFItem()
-            lfi['file_urls'] = [("http://learn.tsinghua.edu.cn" +
-                                 sel.extract()).encode('utf-8')]
-            return lfi
+            lfi['file_urls'] = [
+                ("http://learn.tsinghua.edu.cn" + file_url_list[index].extract()).encode('utf-8')]
+            lfi['filename'] = file_name_list[index].extract().encode(
+                'utf-8').lstrip().rstrip()
+            yield lfi

@@ -21,3 +21,5 @@ class HWItem(scrapy.Item):
 class LFItem(scrapy.Item):
     file_urls = scrapy.Field()
     files = scrapy.Field()
+    filename = scrapy.Field()
+    filetype = scrapy.Field()
