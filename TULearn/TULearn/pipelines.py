@@ -7,7 +7,9 @@
 import datetime
 import codecs
 import mailtest
+import urlparse
 import scrapy
+import requests
 from items import HWItem, LFItem
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.exceptions import DropItem
@@ -42,17 +44,31 @@ class HWPipeline(object):
 
 
 class LFPipeline(scrapy.pipelines.files.FilesPipeline):
+    item_list = []
+
     def get_media_requests(self, item, info):
+        print "media requests"
+        self.item_list.append(item)
         for file_url in item['file_urls']:
-            self.item = item
             yield scrapy.Request(file_url, meta={"lessoname": item['lessonname'], "filename": item['filename']})
 
     def item_completed(self, results, item, info):
+        print "COMPLETED"
         file_paths = [x['path'] for ok, x in results if ok]
+
         if not file_paths:
             raise DropItem("Item contains no files")
         #item['file_paths'] = file_paths
         return item
 
     def file_path(self, request, response=None, info=None):
-        return self.item['lessonname'] + "/" + self.item['filename']
+        lessonname = ""
+        filename = ""
+        for item in self.item_list:
+            if item['file_urls'][0] == request.url:
+                print "url MATCH!!!!"
+                lessonname = item['lessonname']
+                filename = item['filename']
+                break
+        path = ''.join([lessonname, "/", filename])
+        return path

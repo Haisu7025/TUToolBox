@@ -19,6 +19,12 @@ python conf_init.py -u [username for tsinghua] -p [password for tsinghua]
 
 ### 更新日志
 
+#### 2017.10.14
+
+* 通过请求cookie并使用该cookie请求要下载的文件url，就可以获取到文件内容，文件大小
+* 通过获取到的文件名（带有正常后缀）可完成归类获取
+* 基本预期功能实现
+
 #### 2017.10.13
 
 * 重命名了一些文件，重新组织了一部分代码结构，重命名了一些变量

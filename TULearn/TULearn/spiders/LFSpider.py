@@ -2,6 +2,9 @@
 import re
 import scrapy
 import readconfig
+import get_lessonname
+import urllib
+import requests
 from scrapy.http import Request
 from scrapy.http import FormRequest
 from scrapy.selector import Selector
@@ -47,6 +50,7 @@ class LFSpider(scrapy.Spider):
 
     def after_login(self, response):
         print "login successful!!!"
+
         lnk = 'https://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/mainstudent.jsp'
         yield Request(lnk, self.parse)
 
@@ -68,6 +72,14 @@ class LFSpider(scrapy.Spider):
         yield Request("https://learn.tsinghua.edu.cn/MultiLanguage/lesson/student/download.jsp?course_id=" + course_id, callback=self.getFileDetails)
 
     def getFileDetails(self, response):
+
+        # 请求Cookie
+        Cookie = response.request.headers.getlist('Cookie')
+        print 'Cookie', Cookie
+        # 响应Cookie
+        Cookie = response.headers.getlist('Set-Cookie')
+        print 'Set-Cookie', Cookie
+
         for sel in response.xpath('//*[@id="info_1"]/tr[1]/td/text()'):
             ln = sel.extract()
         file_url_list = response.xpath(
@@ -81,8 +93,10 @@ class LFSpider(scrapy.Spider):
                 ("https://learn.tsinghua.edu.cn" + file_url_list[index].extract()).encode('utf-8')]
             lfi['filename'] = file_name_list[index].extract().encode(
                 'utf-8').lstrip().rstrip()
-            # yield Request(lfi['file_urls'][0], self.printURLInfo)
+            r = requests.head(url=lfi['file_urls'][0],
+                              headers={'Cookie': Cookie[0]})
+            t = re.findall(r'attachment;filename="(.*)"',
+                           r.headers['Content-Disposition'])[0]
+            lfi['filename'] = t.decode('gbk').encode('utf-8')
+            print "FILENAME:", t.decode('gbk'), "\n"
             yield lfi
-
-    def printURLInfo(self, response):
-        print response
