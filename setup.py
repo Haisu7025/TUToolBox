@@ -1,0 +1,19 @@
+from distutils.core import setup
+setup(
+    name='TUToolBox',
+    version='1.0.0',
+    py_modules=['src.conf_init',
+                'src.TUNetLogin.login_with_command',
+                'src.TUNetLogin.login_with_config',
+                'src.TUNetLogin.readconfig',
+                'src.TULearn.TULearn.getHomework',
+                'src.TULearn.TULearn.getLessonfile',
+                'src.TULearn.TULearn.items',
+                'src.TULearn.TULearn.mailtest',
+                'src.TULearn.TULearn.middlewares',
+                'src.TULearn.TULearn.pipelines',
+                'src.TULearn.TULearn.settings',
+                'src.TULearn.TULearn.spiders.HWSpider',
+                'src.TULearn.TULearn.spiders.LFSpider',
+                'src.TULearn.TULearn.spiders.readconfig']
+)

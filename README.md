@@ -24,6 +24,7 @@ python conf_init.py -u [username for tsinghua] -p [password for tsinghua]
 * 通过请求cookie并使用该cookie请求要下载的文件url，就可以获取到文件内容，文件大小
 * 通过获取到的文件名（带有正常后缀）可完成归类获取
 * 基本预期功能实现
+* 加入安装脚本
 
 #### 2017.10.13
 
