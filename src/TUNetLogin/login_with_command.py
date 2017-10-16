@@ -43,15 +43,15 @@ if username == "" or password == "":
 m1 = md5.new()
 m1.update(password)
 
-headers = {'UserAgent': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'};
+headers = {'UserAgent': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'}
 values = {'action': 'login', 'username': username,
-          'password': m1.hexdigest(), 'ac_id': '1'};
+          'password': m1.hexdigest(), 'ac_id': '1'}
 data = urllib.urlencode(values)
 ins_pos = data.index('password=') + 9
-data = data[:ins_pos] + '{MD5_HEX}' + data[ins_pos:];
+data = data[:ins_pos] + '{MD5_HEX}' + data[ins_pos:]
 
 request = urllib2.Request(
-    "https://net.tsinghua.edu.cn/do_login.php", headers=headers, data=data);
+    "https://net.tsinghua.edu.cn/do_login.php", headers=headers, data=data)
 response = urllib2.urlopen(request)
 
 res = response.read()
@@ -59,7 +59,7 @@ res = response.read()
 if res == "Login is successful.":
     # 登录成功
     request = urllib2.Request(
-        "https://net.tsinghua.edu.cn/rad_user_info.php", headers=headers, data=data);
+        "https://net.tsinghua.edu.cn/rad_user_info.php", headers=headers, data=data)
     response = urllib2.urlopen(request)
     res = response.read()
     res_s = res.split(",")
@@ -73,7 +73,7 @@ elif res == "IP has been online, please logout.":
         values = {'action': 'logout'}
         data = urllib.urlencode(values)
         request = urllib2.Request(
-            "https://net.tsinghua.edu.cn/do_login.php", headers=headers, data=data);
+            "https://net.tsinghua.edu.cn/do_login.php", headers=headers, data=data)
         pass
         response = urllib2.urlopen(request)
         print response.read()
